@@ -6,7 +6,9 @@ body{
     background-repeat:fixed;
     
 }
-
+#main{
+    max-width: 90%;
+}
 nav {
     position: fixed;
     top: 20px;
@@ -35,15 +37,14 @@ nav a {
 nav .underline {
     position: absolute;
     bottom: 8px;
-    left: 40px; /* Initial position under Home */
-    width: 50px; /* Length under Home */
+    left: 40px; 
+    width: 50px; 
     height: 3px;
     background: linear-gradient(135deg, #f6d365, #fda085);
     border-radius: 10px;
     transition: 0.5s ease;
 }
 
-/* Change underline position based on hovered link */
 nav a:nth-child(1):hover ~ .underline { left: 40px; width: 52.5px; }
 nav a:nth-child(2):hover ~ .underline { left: 155px; width: 52px; }
 nav a:nth-child(3):hover ~ .underline { left: 270px; width: 98px; }
@@ -55,6 +56,7 @@ nav a:nth-child(4):hover ~ .underline { left: 432px; width: 66px; }
 h1{
     color: #f6d365;
     font-size: 50px;
+    align-items: center;
 }
 #welcome-to{
     color: #f6d365;
@@ -81,21 +83,17 @@ p{
     margin-left:5%;
     padding-top: 5%;
     padding-left: 2.8%;
+    justify-content: center;
 }
 .half-width img{
       padding-top: 10%;
     width: 91.5%;
+    
 }
 #fix1{
     transform: none;
 }
 
-.top-banner{
-     
-    /* background-image: url("image/img2.png");
-    background-repeat: no-repeat; */
-    /* background-image: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
-}
 section{
     
     height: 450px;
@@ -105,16 +103,36 @@ section{
      height: 20px;
     padding-bottom: 5px;
 }
-.link-button{
-    text-decoration: none;
-    background:black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 700;
+
+/* social navbar */
+.social-navbar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  z-index: 1000;
 }
 
-.link-button:hover{
-    background: linear-gradient(135deg, #1877F2, #3b5998);
+.social-navbar a {
+  color: #ffff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.social-navbar a:hover {
+  color: #00bfff;
+  transform: scale(1.2);
+}
+/* About section */
+.dream-area{
+    background-image: url(image/img4.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
 
