@@ -432,3 +432,69 @@ header {
   flex: 1 1 100%;
   max-width: 600px;
 }
+
+
+/* hobbies */
+.Hobbies {
+   padding: 1rem 3rem;
+   padding-bottom: 2rem;
+  text-align: center;
+}
+
+.Hobbies_container .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+.Hobbies_container .cards .card {
+    background-color: var(--primary);
+    padding: 1.5rem 1rem;
+    margin: 0 1.5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.Hbox i {
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    color: var(--normal);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 14px;
+    transition: all 1s;
+}
+
+.Hbox h3 {
+    font-size: 1.2rem;
+    color: var(--normal);
+}
+
+.Hbox p {
+    margin: 1.2rem 0;
+    color: var(--black);
+}
+
+.Hobbies_container .cards .card:hover .Hbox i {
+    background-color: var(--primary);
+    color: var(--normal);
+}
+
+.Hobbies_container .cards .card::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #fecf01;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.Hobbies_container .cards .card:hover::after {
+    transform: rotate(13deg);
+}
